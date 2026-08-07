@@ -1,5 +1,5 @@
-import { Braces, Layers, Rocket, ExternalLink } from "lucide-react";
-import { projects, skillGroups, timeline } from "./data";
+import { Braces, Layers, Rocket, ExternalLink, BadgeCheck, Clock } from "lucide-react";
+import { certifications, projects, skillGroups, timeline } from "./data";
 
 function SectionHeading({
   index,
@@ -194,6 +194,65 @@ export function Experience() {
           </li>
         ))}
       </ol>
+    </section>
+  );
+}
+
+export function Certifications() {
+  return (
+    <section id="certifications" className="mx-auto max-w-6xl px-5 py-20 md:py-24">
+      <SectionHeading
+        index="05 / certifications"
+        title="Certifications &amp; licenses"
+        subtitle="Industry job simulations, cloud fundamentals, and ongoing AI coursework."
+      />
+      <div className="grid gap-5 md:grid-cols-2">
+        {certifications.map((c) => (
+          <article
+            key={c.name}
+            className="card-hover flex flex-col rounded-xl border border-border bg-card p-6"
+          >
+            <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-primary">
+                {c.status === "in-progress" ? <Clock size={18} /> : <BadgeCheck size={18} />}
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-base leading-snug font-semibold">{c.name}</h3>
+                <p className="mt-0.5 text-sm text-accent">{c.issuer}</p>
+                <p className="mt-1 font-mono text-xs text-muted-foreground">{c.date}</p>
+              </div>
+            </div>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {c.skills.map((s) => (
+                <span
+                  key={s}
+                  className="rounded border border-primary/25 bg-primary/10 px-2 py-0.5 font-mono text-[11px] text-primary"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-auto flex items-center gap-3 pt-6">
+              <a
+                href={c.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+              >
+                {c.linkLabel}
+                <ExternalLink size={14} />
+              </a>
+              {c.status === "in-progress" && (
+                <span className="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 font-mono text-[10px] tracking-wide text-accent uppercase">
+                  In progress
+                </span>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
