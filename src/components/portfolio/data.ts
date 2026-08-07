@@ -1,3 +1,6 @@
+import awsCert from "@/assets/AWS_Certification.pdf.asset.json";
+import jpmCert from "@/assets/JPMorgan.pdf.asset.json";
+import walmartCert from "@/assets/walmart_certificate.pdf.asset.json";
 export const socials = [
   { label: "GitHub", handle: "mohdanas-hash", url: "https://github.com/mohdanas-hash" },
   {
@@ -110,5 +113,55 @@ export const timeline = [
     title: "High School (ICSE)",
     org: "Bishop Westcott School, Kanpur",
     detail: "Completed secondary schooling — 83%.",
+  },
+];
+
+
+export const certifications = [
+  {
+    name: "Oracle Agentic AI Foundations 2026",
+    issuer: "Oracle University",
+    date: "In progress — 2026",
+    status: "in-progress" as const,
+    skills: ["Agentic AI", "LLM Foundations", "Oracle Cloud AI"],
+    url: "https://mylearn.oracle.com/ou/course/oracle-agentic-ai-foundations-2026/163240/272348",
+    linkLabel: "View course",
+  },
+  {
+    name: "Quantitative Research Job Simulation",
+    issuer: "JPMorgan Chase & Co. (via Forage)",
+    date: "Issued July 2026",
+    status: "completed" as const,
+    skills: [
+      "Price data analysis",
+      "Commodity contract pricing",
+      "Credit risk analysis",
+      "FICO score bucketing",
+    ],
+    url: jpmCert.url,
+    linkLabel: "View certificate",
+  },
+  {
+    name: "Advanced Software Engineering Job Simulation",
+    issuer: "Walmart Global Tech (via Forage)",
+    date: "Issued July 2026",
+    status: "completed" as const,
+    skills: [
+      "Advanced Data Structures",
+      "Software Architecture",
+      "Relational Database Design",
+      "Data Munging",
+    ],
+    url: walmartCert.url,
+    linkLabel: "View certificate",
+  },
+  {
+    name: "AWS Cloud Practitioner Essentials",
+    issuer: "AWS Training & Certification",
+    date: "Completed July 2026",
+    status: "completed" as const,
+    skills: ["Cloud Fundamentals", "AWS Core Services", "Cloud Security"],
+    url: awsCert.url,
+    linkLabel: "View certificate",
   },
 ];
