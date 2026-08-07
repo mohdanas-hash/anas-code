@@ -234,22 +234,13 @@ export function Certifications() {
               ))}
             </div>
 
-            <div className="mt-auto flex items-center gap-3 pt-6">
-              <a
-                href={c.url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
-              >
-                {c.linkLabel}
-                <ExternalLink size={14} />
-              </a>
-              {c.status === "in-progress" && (
+            {c.status === "in-progress" && (
+              <div className="mt-auto pt-6">
                 <span className="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 font-mono text-[10px] tracking-wide text-accent uppercase">
                   In progress
                 </span>
-              )}
-            </div>
+              </div>
+            )}
           </article>
         ))}
       </div>
