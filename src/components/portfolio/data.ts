@@ -102,13 +102,13 @@ export const timeline = [
   {
     period: "2023",
     title: "Intermediate (ISC)",
-    org: "Senior secondary education",
+    org: "Bishop Westcott School",
     detail: "Completed with a focus on mathematics and computer science — 70%.",
   },
   {
     period: "2021",
     title: "High School (ICSE)",
-    org: "Secondary education",
+    org: "Bishop Westcott School",
     detail: "Completed secondary schooling — 83%.",
   },
 ];
