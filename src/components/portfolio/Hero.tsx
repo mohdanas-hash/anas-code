@@ -5,11 +5,11 @@ const badges = ["C++", "Python", "JavaScript", "React / Web Dev"];
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="grid-bg pointer-events-none absolute inset-0 opacity-60" />
+    <section id="home" className="aurora-bg relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div className="grid-bg pointer-events-none absolute inset-0 opacity-70" />
       <div
-        className="pointer-events-none absolute -top-32 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full blur-3xl"
-        style={{ background: "var(--gradient-accent)", opacity: 0.12 }}
+        className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[40rem] -translate-x-1/2 rounded-full blur-3xl pulse-glow"
+        style={{ background: "var(--gradient-accent)", opacity: 0.18 }}
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="min-w-0">
