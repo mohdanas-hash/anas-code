@@ -103,12 +103,12 @@ export const timeline = [
     period: "2023",
     title: "Intermediate (ISC)",
     org: "Senior secondary education",
-    detail: "Completed with a focus on mathematics and computer science.",
+    detail: "Completed with a focus on mathematics and computer science — 70%.",
   },
   {
     period: "2021",
     title: "High School (ICSE)",
     org: "Secondary education",
-    detail: "Completed secondary schooling.",
+    detail: "Completed secondary schooling — 83%.",
   },
 ];
