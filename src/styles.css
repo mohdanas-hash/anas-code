@@ -124,6 +124,12 @@
   color: transparent;
 }
 
+@utility text-glow {
+  text-shadow:
+    0 0 20px color-mix(in oklab, var(--cyan) 50%, transparent),
+    0 0 40px color-mix(in oklab, var(--emerald) 30%, transparent);
+}
+
 @utility glass {
   background-color: color-mix(in oklab, var(--background) 72%, transparent);
   backdrop-filter: blur(14px) saturate(140%);
@@ -131,22 +137,49 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in oklab, var(--foreground) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 8%, transparent) 1px, transparent 1px);
   background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
+
+@utility aurora-bg {
+  background:
+    radial-gradient(ellipse at 20% 20%, color-mix(in oklab, var(--cyan) 18%, transparent) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 10%, color-mix(in oklab, var(--emerald) 14%, transparent) 0%, transparent 45%),
+    radial-gradient(ellipse at 60% 90%, color-mix(in oklab, var(--cyan) 12%, transparent) 0%, transparent 50%),
+    var(--background);
 }
 
 @utility card-hover {
   transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
   &:hover {
     transform: translateY(-4px);
-    border-color: color-mix(in oklab, var(--cyan) 45%, transparent);
+    border-color: color-mix(in oklab, var(--cyan) 55%, transparent);
     box-shadow: var(--glow-cyan);
   }
 }
 
 @utility glow-ring {
   box-shadow: var(--glow-cyan);
+}
+
+@utility shine-border {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-accent);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0.6;
+  }
 }
 
 @keyframes float-slow {
@@ -161,4 +194,18 @@
 
 @utility floaty {
   animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@utility pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
 }
