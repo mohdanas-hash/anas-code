@@ -23,7 +23,7 @@ export function Contact() {
     <section id="contact" className="mx-auto max-w-6xl px-5 py-20 md:py-24">
       <div className="mb-12 max-w-2xl">
         <p className="mb-3 font-mono text-xs tracking-widest text-primary uppercase">
-          05 / contact
+          06 / contact
         </p>
         <h2 className="text-2xl font-bold sm:text-3xl">Let's build something</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
