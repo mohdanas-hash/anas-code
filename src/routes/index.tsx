@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
-import { About, Skills, Projects, Experience } from "@/components/portfolio/Sections";
+import {
+  About,
+  Skills,
+  Projects,
+  Experience,
+  Certifications,
+} from "@/components/portfolio/Sections";
 import { Contact } from "@/components/portfolio/Contact";
 
 const title = "Mohd Anas — CS Student & Full-Stack Web Developer";
@@ -32,6 +38,7 @@ function Index() {
         <Skills />
         <Projects />
         <Experience />
+        <Certifications />
         <Contact />
       </main>
       <footer className="border-t border-border py-8">
