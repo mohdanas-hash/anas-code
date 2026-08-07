@@ -124,8 +124,6 @@ export const certifications = [
     date: "In progress — 2026",
     status: "in-progress" as const,
     skills: ["Agentic AI", "LLM Foundations", "Oracle Cloud AI"],
-    url: "https://mylearn.oracle.com/ou/course/oracle-agentic-ai-foundations-2026/163240/272348",
-    linkLabel: "View course",
   },
   {
     name: "Quantitative Research Job Simulation",
@@ -138,8 +136,6 @@ export const certifications = [
       "Credit risk analysis",
       "FICO score bucketing",
     ],
-    url: jpmCert.url,
-    linkLabel: "View certificate",
   },
   {
     name: "Advanced Software Engineering Job Simulation",
@@ -152,8 +148,6 @@ export const certifications = [
       "Relational Database Design",
       "Data Munging",
     ],
-    url: walmartCert.url,
-    linkLabel: "View certificate",
   },
   {
     name: "AWS Cloud Practitioner Essentials",
@@ -161,7 +155,5 @@ export const certifications = [
     date: "Completed July 2026",
     status: "completed" as const,
     skills: ["Cloud Fundamentals", "AWS Core Services", "Cloud Security"],
-    url: awsCert.url,
-    linkLabel: "View certificate",
   },
 ];
