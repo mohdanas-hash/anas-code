@@ -1,6 +1,3 @@
-import awsCert from "@/assets/AWS_Certification.pdf.asset.json";
-import jpmCert from "@/assets/JPMorgan.pdf.asset.json";
-import walmartCert from "@/assets/walmart_certificate.pdf.asset.json";
 export const socials = [
   { label: "GitHub", handle: "mohdanas-hash", url: "https://github.com/mohdanas-hash" },
   {
