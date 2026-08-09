@@ -87,12 +87,14 @@ export function Contact() {
           </label>
           <button
             type="submit"
-            className="mt-5 inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+            disabled={sending}
+            className="mt-5 inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-60"
             style={{ background: "var(--gradient-accent)" }}
           >
-            Send message
+            {sending ? "Sending..." : "Send message"}
             <Send size={15} />
           </button>
+
         </form>
 
         <div className="space-y-5">
