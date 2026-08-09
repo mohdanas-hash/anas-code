@@ -5,6 +5,11 @@ import { useServerFn } from "@tanstack/react-start";
 import { submitContactMessage } from "@/lib/contact.functions";
 import { socials } from "./data";
 
+// EmailJS public browser credentials (safe to expose)
+const EMAILJS_SERVICE_ID = "service_cbp9tr6";
+const EMAILJS_TEMPLATE_ID = "template_hqqwy8r";
+const EMAILJS_PUBLIC_KEY = "StYR2mPx1vkJZA4xd";
+
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
@@ -15,6 +20,26 @@ export function Contact() {
     setSending(true);
     try {
       await sendMessage({ data: form });
+
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: form.name,
+            from_email: form.email,
+            reply_to: form.email,
+            name: form.name,
+            email: form.email,
+            message: form.message,
+            to_email: "mohd.anas.gt3@gmail.com",
+          },
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
       toast.success("Message sent", {
         description: `Thanks ${form.name || "there"} — I'll get back to you at ${
           form.email || "your email"
