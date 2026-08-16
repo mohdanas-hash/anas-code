@@ -8,17 +8,17 @@ export const socials = [
   { label: "LeetCode", handle: "Anas_69", url: "https://leetcode.com/u/Anas_69" },
   { label: "HackerRank", handle: "Anas_69", url: "https://www.hackerrank.com" },
   { label: "Codolio", handle: "Anas", url: "https://codolio.com" },
-  { label: "Monkeytype", handle: "Anas", url: "https://monkeytype.com" },
+  { label: "Monkeytype", handle: "Anas", url: "https://monkeytype.com/account" },
 ];
 
 export const skillGroups = [
   {
     title: "Languages",
-    items: ["C++", "Python", "JavaScript", "HTML5", "CSS3"],
+    items: ["C++", "Python", "C", "JavaScript", "HTML5", "CSS3"],
   },
   {
     title: "Core CS Fundamentals",
-    items: ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems"],
+    items: ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems", "Computer Network", "DAA", "COA"],
   },
   {
     title: "Web & Tools",
@@ -32,8 +32,8 @@ export const skillGroups = [
       "GitHub Pages",
     ],
   },
-  { title: "Database", items: ["MySQL"] },
-  { title: "Platforms", items: ["LeetCode", "HackerRank", "Codolio", "Monkeytype"] },
+  { title: "Database", items: ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Redis"] },
+  { title: "Platforms", items: ["LeetCode", "HackerRank", "Codolio", "Monkeytype", "GitHub", "Codeforces", "GFG"] },
 ];
 
 export const projects = [
@@ -60,7 +60,7 @@ export const projects = [
     links: [{ label: "Live demo", url: "https://mohdanas-hash.github.io" }],
   },
   {
-    name: "RPS://PROTOCOL",
+    name: "Rock Paper Scissor Game",
     kind: "Interactive browser game",
     tags: ["JavaScript", "Web Audio API"],
     points: [
@@ -68,7 +68,7 @@ export const projects = [
       "Live match stat visualizations",
       "Procedural sound design with the Web Audio API",
     ],
-    links: [{ label: "Play now", url: "https://mohdanas-hash.github.io" }],
+    links: [{ label: "Play now", url: "https://mohdanas-hash.github.io/Rock-Paper-Scissors/" }],
   },
   {
     name: "Personal Portfolio Website",
@@ -103,7 +103,7 @@ export const timeline = [
     period: "2023",
     title: "Intermediate (ISC)",
     org: "Bishop Westcott School, Kanpur",
-    detail: "Completed with a focus on mathematics and computer science — 70%.",
+    detail: "Completed with a focus on Mathematics and Science — 70%.",
   },
   {
     period: "2021",
@@ -118,8 +118,8 @@ export const certifications = [
   {
     name: "Oracle Agentic AI Foundations 2026",
     issuer: "Oracle University",
-    date: "In progress — 2026",
-    status: "in-progress" as const,
+    date: "Issued August 2026",
+    status: "completed" as const,
     skills: ["Agentic AI", "LLM Foundations", "Oracle Cloud AI"],
   },
   {
