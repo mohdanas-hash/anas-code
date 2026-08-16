@@ -125,6 +125,7 @@ export const certifications = [
     issuer: "Oracle University",
     date: "Issued August 2026",
     status: "completed" as const,
+    file: oracleCert.url,
     skills: ["Agentic AI", "LLM Foundations", "Oracle Cloud AI"],
   },
   {
@@ -132,6 +133,7 @@ export const certifications = [
     issuer: "JPMorgan Chase & Co. (via Forage)",
     date: "Issued July 2026",
     status: "completed" as const,
+    file: jpmorganCert.url,
     skills: [
       "Price data analysis",
       "Commodity contract pricing",
@@ -144,6 +146,7 @@ export const certifications = [
     issuer: "Walmart Global Tech (via Forage)",
     date: "Issued July 2026",
     status: "completed" as const,
+    file: walmartCert.url,
     skills: [
       "Advanced Data Structures",
       "Software Architecture",
@@ -156,6 +159,7 @@ export const certifications = [
     issuer: "AWS Training & Certification",
     date: "Completed July 2026",
     status: "completed" as const,
+    file: awsCert.url,
     skills: ["Cloud Fundamentals", "AWS Core Services", "Cloud Security"],
   },
 ];
