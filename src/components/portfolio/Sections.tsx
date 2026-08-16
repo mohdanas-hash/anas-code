@@ -208,13 +208,10 @@ export function Certifications() {
       />
       <div className="grid gap-5 md:grid-cols-2">
         {certifications.map((c) => (
-          <article
-            key={c.name}
-            className="card-hover flex flex-col rounded-xl border border-border bg-card p-6"
-          >
+          <div className="min-w-0">
             <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-primary">
-                {c.status === "in-progress" ? <Clock size={18} /> : <BadgeCheck size={18} />}
+                <BadgeCheck size={18} />
               </span>
               <div className="min-w-0">
                 <h3 className="text-base leading-snug font-semibold">{c.name}</h3>
@@ -233,15 +230,7 @@ export function Certifications() {
                 </span>
               ))}
             </div>
-
-            {c.status === "in-progress" && (
-              <div className="mt-auto pt-6">
-                <span className="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 font-mono text-[10px] tracking-wide text-accent uppercase">
-                  In progress
-                </span>
-              </div>
-            )}
-          </article>
+          </div>
         ))}
       </div>
     </section>
