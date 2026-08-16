@@ -233,6 +233,20 @@ export function Certifications() {
                 </span>
               ))}
             </div>
+
+            {c.file && (
+              <div className="mt-5 pt-1">
+                <a
+                  href={c.file}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
+                >
+                  View certificate
+                  <ExternalLink size={13} />
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>
