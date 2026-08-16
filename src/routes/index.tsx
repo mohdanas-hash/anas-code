@@ -9,6 +9,7 @@ import {
   Certifications,
 } from "@/components/portfolio/Sections";
 import { Contact } from "@/components/portfolio/Contact";
+import { FlightIntro } from "@/components/portfolio/FlightIntro";
 
 const title = "Mohd Anas — CS Student & Full-Stack Web Developer";
 const description =
