@@ -114,6 +114,11 @@ export const timeline = [
 ];
 
 
+import oracleCert from "@/assets/Oracle_Certificate.pdf.asset.json";
+import jpmorganCert from "@/assets/JPMorgan.pdf.asset.json";
+import walmartCert from "@/assets/walmart_certificate.pdf.asset.json";
+import awsCert from "@/assets/AWS_Certification.pdf.asset.json";
+
 export const certifications = [
   {
     name: "Oracle Agentic AI Foundations 2026",
