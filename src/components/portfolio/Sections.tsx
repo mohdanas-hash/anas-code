@@ -208,7 +208,10 @@ export function Certifications() {
       />
       <div className="grid gap-5 md:grid-cols-2">
         {certifications.map((c) => (
-          <div className="min-w-0">
+          <article
+            key={c.name}
+            className="card-hover flex flex-col rounded-xl border border-border bg-card p-6"
+          >
             <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-primary">
                 <BadgeCheck size={18} />
@@ -230,7 +233,7 @@ export function Certifications() {
                 </span>
               ))}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
