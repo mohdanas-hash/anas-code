@@ -1,4 +1,4 @@
-import { Braces, Layers, Rocket, ExternalLink, BadgeCheck, Clock } from "lucide-react";
+import { Braces, Layers, Rocket, ExternalLink, BadgeCheck } from "lucide-react";
 import { certifications, projects, skillGroups, timeline } from "./data";
 
 function SectionHeading({
