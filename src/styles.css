@@ -240,21 +240,16 @@
   }
 }
 
-@keyframes flight-fly {
+@keyframes flight-fade {
   0% {
-    offset-distance: 0%;
     opacity: 0;
   }
-  5% {
+  6%,
+  56% {
     opacity: 1;
   }
-  52% {
-    offset-distance: 100%;
-    opacity: 1;
-  }
-  62%,
+  66%,
   100% {
-    offset-distance: 100%;
     opacity: 0;
   }
 }
@@ -279,13 +274,7 @@
 }
 
 .flight-plane {
-  offset-path: path("M -80 360 C 220 210, 520 430, 1080 150");
-  offset-rotate: auto;
-  animation: flight-fly 6.2s ease-in-out forwards;
-}
-
-.flight-plane-b {
-  offset-path: path("M 1080 420 C 780 280, 460 90, -80 260");
+  animation: flight-fade 6.2s ease-in-out forwards;
 }
 
 .flight-plane-body {
