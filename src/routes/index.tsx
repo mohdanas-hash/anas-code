@@ -53,6 +53,7 @@ function Index() {
           </p>
         </div>
       </footer>
+      <ChatWidget />
     </div>
   );
 }
