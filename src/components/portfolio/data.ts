@@ -57,7 +57,7 @@ export const projects = [
       "Keyword matching against role requirements",
       "Section structure detection and scoring",
     ],
-    links: [{ label: "Live demo", url: "https://mohdanas-hash.github.io" }],
+    links: [{ label: "Live demo", url: "https://resume-analyzer-liart-rho.vercel.app/" }],
   },
   {
     name: "Rock Paper Scissor Game",
@@ -79,9 +79,7 @@ export const projects = [
       "Breakpoint system built on CSS media queries",
       "Deployed on GitHub Pages",
     ],
-    links: [
-      { label: "Live site", url: "https://mohdanas-hash.github.io/mohd-anas-portfolio/" },
-    ],
+    links: [{ label: "Live site", url: "https://anas-code.lovable.app" }],
   },
 ];
 
