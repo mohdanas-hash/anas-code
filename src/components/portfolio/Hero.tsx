@@ -1,5 +1,6 @@
 import { Github, Linkedin, Code2, ArrowRight, Mail } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
+import { RotatingCube } from "./RotatingCube";
 
 const badges = ["C++", "Python", "JavaScript", "React / Web Dev"];
 
@@ -69,6 +70,7 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm">
+          <RotatingCube className="pointer-events-none absolute -top-12 -right-4 z-10 hidden sm:block" />
           <div className="glow-ring relative rounded-2xl border border-border bg-surface p-2">
             <img
               src={avatar}

@@ -9,6 +9,7 @@ import {
   Certifications,
 } from "@/components/portfolio/Sections";
 import { Contact } from "@/components/portfolio/Contact";
+import { ChatWidget } from "@/components/portfolio/ChatWidget";
 
 const title = "Mohd Anas — CS Student & Full-Stack Web Developer";
 const description =
@@ -52,6 +53,7 @@ function Index() {
           </p>
         </div>
       </footer>
+      <ChatWidget />
     </div>
   );
 }
