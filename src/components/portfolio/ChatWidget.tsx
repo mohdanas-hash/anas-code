@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { MessageSquareCode, X, Send } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { askPortfolioBot } from "@/lib/chat.functions";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
@@ -91,10 +92,10 @@ export function ChatWidget() {
                 className={
                   m.role === "user"
                     ? "ml-auto max-w-[85%] rounded-xl rounded-br-sm bg-primary px-3 py-2 text-sm text-primary-foreground"
-                    : "max-w-[92%] text-sm leading-relaxed whitespace-pre-wrap text-foreground"
+                    : "chat-md max-w-[92%] text-sm leading-relaxed text-foreground"
                 }
               >
-                {m.content}
+                {m.role === "assistant" ? <ReactMarkdown>{m.content}</ReactMarkdown> : m.content}
               </div>
             ))}
             {loading && (

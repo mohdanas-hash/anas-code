@@ -280,3 +280,27 @@
   }
 }
 
+
+.chat-md > * + * {
+  margin-top: 0.6rem;
+}
+.chat-md strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+.chat-md a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.chat-md ul,
+.chat-md ol {
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+.chat-md code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--surface);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
