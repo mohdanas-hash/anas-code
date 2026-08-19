@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { MessageSquareCode, X, Send } from "lucide-react";
+import { X, Send } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { askPortfolioBot } from "@/lib/chat.functions";
+import botLogo from "@/assets/chatbot-logo.png.asset.json";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -57,14 +58,24 @@ export function ChatWidget() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="chat-tab group fixed top-1/2 right-0 z-50 flex -translate-y-1/2 items-center gap-2 rounded-l-xl border border-r-0 border-primary/40 bg-card/90 px-2.5 py-4 text-xs font-medium text-primary shadow-lg backdrop-blur transition-transform hover:-translate-x-1 hover:-translate-y-1/2"
+          aria-label="Ask me about my projects"
+          className="group flex flex-col items-center gap-2"
         >
-          <MessageSquareCode size={16} className="shrink-0" />
-          <span className="chat-tab-label font-mono tracking-wide">
+          <img
+            src={botLogo.url}
+            alt="Chat bot assistant"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="h-16 w-16 transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105"
+            style={{ filter: "drop-shadow(0 8px 24px color-mix(in oklab, var(--cyan) 45%, transparent))" }}
+          />
+          <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-primary">
             Ask me about my projects
           </span>
         </button>
       )}
+
 
       {open && (
         <div className="fixed inset-x-3 bottom-3 z-50 flex max-h-[80vh] flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl sm:inset-x-auto sm:right-4 sm:bottom-4 sm:h-[32rem] sm:w-[22rem]">
