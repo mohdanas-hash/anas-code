@@ -43,7 +43,8 @@ function Index() {
         <Contact />
       </main>
       <footer className="border-t border-border py-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-5 text-center">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 text-center">
+          <ChatWidget />
           <span className="font-mono text-sm">
             <span className="text-gradient">Anas</span>
             <span className="text-muted-foreground">.dev</span>
@@ -53,7 +54,6 @@ function Index() {
           </p>
         </div>
       </footer>
-      <ChatWidget />
     </div>
   );
 }
