@@ -210,9 +210,6 @@
   animation: pulse-glow 4s ease-in-out infinite;
 }
 
-.chat-tab-label {
-  writing-mode: vertical-rl;
-}
 
 
 .chat-md > * + * {
