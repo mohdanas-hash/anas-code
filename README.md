@@ -5,11 +5,6 @@ Create a modern, sleek, and high-performance developer portfolio website for Moh
 https://mohdanas-hash.github.io/mohd-anas-portfolio/
 (take it as example)
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://anas-code.lovable.app
-
-## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4f0f72ab-f044-4547-9272-fe06c71e6a96).
 
